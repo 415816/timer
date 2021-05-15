@@ -7,7 +7,7 @@ setInterval(function(){
     let m = (c/60) >> 0;
     let s = (c - m * 60) + '';
     r.textContent = m + ':' + (s.length > 1 ? '' : '0') + s;
-    tmp != 0 || (tmp=time);
+    tmp != 0 || (tmp = time);
 },1000);
 
 let mass = [
@@ -28,7 +28,10 @@ let mass = [
     [8001.48,   7504.98,    6998.48,    5.77,   13.9,   1,  15],
     [8003.14,   7506.64,    7000.14,    6.16,   14.9,   1,  16],
 ];
-
-for (let i = 0; i < mass.length; i++){
-    console.log(mass);
+let Sg = '';
+for (let i = 0; i < mass.length; i++){  
+    Sg += String(mass[i][0]) + ',';
 }
+console.log(Sg.split(','));
+console.log(typeof Sg.split(','));
+console.log(typeof mass);

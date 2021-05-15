@@ -617,14 +617,29 @@ let Sc;
 let Sh;
 let V;
 let t;
+let step;
 
 Sg = ColumnToRow(mass, 0);
-console.log(Sg);
+//console.log(Sg);
 Sc = ColumnToRow(mass, 1);
-console.log(Sc);
+//console.log(Sc);
 Sh = ColumnToRow(mass, 2);
-console.log(Sh);
+//console.log(Sh);
 V = ColumnToRow(mass, 3);
-console.log(V);
+//console.log(V);
 t = ColumnToRow(mass, 4);
-console.log(t);
+//console.log(t);
+step = ColumnToRow(mass, 6);
+//console.log(step);
+
+Ir = 237;
+
+let srchInArr = function searchInArray(array, n) {
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] >= n) {
+            return [i, array[i]];
+        }
+    }
+}
+
+console.log(srchInArr(t, Ir));
